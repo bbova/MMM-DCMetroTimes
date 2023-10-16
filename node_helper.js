@@ -212,7 +212,7 @@ module.exports = NodeHelper.create({
 	    for (var cIndex = 0; cIndex < theTrains.length; cIndex++){
 	        var train = theTrains[cIndex];
             // make sure there is a destination code
-	        if (train.DestinationCode !== null)
+	        if (train.Destination !== null)
 	        {
                 // get all the parts of the train time
 	            var tLocationCode     = train.LocationCode;
