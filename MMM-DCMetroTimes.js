@@ -53,7 +53,7 @@ Module.register("MMM-DCMetroTimes", {
         this.config.identifier = this.identifier;
         this.config.path = this.data.path;
         this.firstUpdateDOMFlag = false;
-        this.dataLoaded = false;        
+        this.dataLoaded = false;
         this.errorMessage = null;
         this.dataIncidentDescriptionList = null;
         this.dataIncidentLinesList = null;
@@ -63,7 +63,7 @@ Module.register("MMM-DCMetroTimes", {
         if (this.config.showHeader)
             this.data.header = this.config.headerText;
          // the api key is set, send the config
-        if (this.config.wmata_api_key !== null) 
+        if (this.config.wmata_api_key !== null)
             this.sendSocketNotification('REGISTER_CONFIG', this.config);    
         // if not, flag the error
         else 
@@ -267,7 +267,7 @@ Module.register("MMM-DCMetroTimes", {
                     var headElement = document.createElement("td");
                     headElement.align = "right";
                     headElement.colSpan = "3";
-                    headElement.className = "small";                    
+                    headElement.className = "medium";
                     headElement.innerHTML = cStation.StationName;                   
                     headRow.appendChild(headElement);
                     wrapper.appendChild(headRow);                               
@@ -285,7 +285,7 @@ Module.register("MMM-DCMetroTimes", {
                             // each row should be the train line color, it's destination, and arrival time
                             var cTrain = cStation.TrainList[cTrainIndex];
                             var trainRow = document.createElement("tr");
-                            trainRow.className = "xsmall";
+                            trainRow.className = "medium";
                             trainRow.align = "left";
                             var lineElement = document.createElement("td");
                             if (this.config.colorizeLines)
